@@ -8,40 +8,34 @@ import javax.swing.JPanel;
 import gra.controler.DrawingControler;
 import gra.view.DrawingPanel;
 
-
-public class DrawingFrame extends JPanel
+public class DrawingFrame extends JFrame
 {
-
-
-	
 	private DrawingControler baseController;
-	private ShapePanel basePanel;
+	private DrawingPanel basePanel;
+	
 	public DrawingFrame(DrawingControler baseController)
 	{
 		this.baseController = baseController;
-		basePanel = new ShapePanel (baseController);
+		basePanel = new DrawingPanel (baseController);
 		setupFrame();
 	}
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(500,500);
+		this.setTitle("Art!!!");
 		this.setResizable(false);
 		this.setVisible(true);
 		
 	}
 	
-	private void setResizable(boolean b)
+	
+	
+	public DrawingControler getBaseController()
 	{
-		// TODO Auto-generated method stub
-		
+		return baseController;
 	}
-	private void setContentPane(ShapePanel basePanel2)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
 
 
 
