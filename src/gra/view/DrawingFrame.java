@@ -23,7 +23,7 @@ public class DrawingFrame extends JFrame
 	{
 		this.setContentPane(basePanel);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setSize(500,500);
+		this.setSize(1000,1000);
 		this.setTitle("Art!!!");
 		this.setResizable(false);
 		this.setVisible(true);
